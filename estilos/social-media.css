@@ -1,9 +1,19 @@
 @charset "UTF-8";
 
+:root{
+    --amethyst: #9d75cbff;
+    --ghost-white: #ecebf3ff;
+    --lime: #d4fc5bff;
+    --cal-poly-green: #323c14ff;
+    --gunmetal: #272d2dff;
+    --title: 'Goblin One', cursive;
+    --text: 'Manrope', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--title);
 }
 
 ::-webkit-scrollbar {
@@ -16,16 +26,36 @@ img {
 
 }
 
-a{
-    display: block;
-    background-color: chartreuse;
-    padding: 20px;
-    text-align: center;
-    font-weight: bold;  
-    text-decoration: none;
-    color: white;      
+div.button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
 }
 
-a:hover {
-    background-color: darkgreen;
+div.button a {
+    width: 50px;
+    height: 50px;
+    background-color: var(--amethyst);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.button img {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    opacity: 0.5;
+}
+
+div.button a:hover {
+    transform: translate(-3px, 0px) scale(120%);
+    transition: transform 0.3s;
+    background-color: var(--amethyst);
+    transition: .3s; 
+} 
+
+div.button img:hover {
+    opacity:0.5;
 }

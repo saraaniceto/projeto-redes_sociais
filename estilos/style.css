@@ -1,50 +1,42 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+:root{
+    --amethyst: #9d75cbff;
+    --ghost-white: #ecebf3ff;
+    --lime: #d4fc5bff;
+    --cal-poly-green: #323c14ff;
+    --gunmetal: #272d2dff;
+    --title: 'Goblin One', cursive;
+    --text: 'Manrope', sans-serif;
+}
 
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--text);
 }
 
 html, body {
     height: 100vh;
     width: 100vw;
-    background-color: black;
+    background-color: var(--amethyst);
 }
 
 main {
     position: relative;
     height: 100vh;
-    background-image: url(../imagens/fundo-madeira.jpg);
+    background-color: var(--ghost-white);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
-section#mobile {
-    position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    width: 311px;
-    height: 627px;
-    background-image:url(../imagens/frame-iphone.png);
-    background-repeat: no-repeat;
-
-}
-
-iframe#screen {
-    position: relative;
-    top: 80px;
-    left: 22px;
-    width: 267px;
-    height: 471px;
-}
-
-section#social-media{
+nav.social-media{
     position: absolute;
     right: 15px;
-    top: 15px;
+    top: 50%;
+    transform: translate(0, -50%);
     padding: 0;       
     margin: 0;
     display: flex;
@@ -52,53 +44,86 @@ section#social-media{
     flex-direction: column;
 }
 
-section#social-media a {
+nav.social-media a {
     width: 50px;
     height: 50px;
-    background-color: darkgreen;
+    background-color: var(--lime);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-section#social-media img {
+nav.social-media img {
     width: 30px;
     height: 30px;
     padding: 10px;
-    filter: invert();
     opacity: 0.5;
-
 }
 
-section#social-media a:hover {
+nav.social-media a:hover {
     transform: translate(-3px, 0px) scale(120%);
     transition: transform 0.3s;
-    background-color: chartreuse;
-    transition: .3s;   
-
+    background-color: var(--amethyst);
+    transition: .3s; 
 } 
 
-section#social-media img:hover {
-    filter: none;
+nav.social-media img:hover {
     opacity:0.5;
-} 
-
-/* 
-section#social-media img {
-    width: 50px;
-    height: 50px;
-    margin: 10px;
-    border-radius: 50%;
-    display: flex;
-    box-sizing: border-box;    
 }
 
-section#social-media img {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    box-sizing: border-box;    
+
+section#background {
+    position: relative;
+    top: 50%;
+    left: 37.5%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
 }
 
-*/
+div.text {
+    position: absolute;
+    top: 171px;
+    left: 160px;
+    max-width: 500px;
+}
+
+div.text h1{
+    font-family: var(--title);
+    color: var(--lime);
+    font-size: 3em;
+    padding-bottom: 62px;
+}
+
+div.text h1 > span{
+    font-family: var(--title);
+    color: var(--amethyst);
+    padding-bottom: 10px;;
+}
+
+div.text p{
+    color: var(--ghost-white);
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+section#mobile {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 510px;
+    background-image:url(../imagens/frame-iphone.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+iframe#screen {
+    position: relative;
+    top: 5px;
+    left: 9px;
+    width: 233px;
+    height: 500px;
+    border-radius: 31px;
+}
