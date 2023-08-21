@@ -40,7 +40,7 @@ section#main {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--cal-poly-green);
-    border-radius: 200px 0 0 200px;
+    border-radius: 200vw 0 0 200vw;
     /* background-image: url(../imagens/elipse-background.png);
     background-repeat: no-repeat;
     background-size: contain; */
@@ -58,19 +58,18 @@ div.text {
 div.text h1{
     font-family: var(--title);
     color: var(--lime);
-    font-size: 3em;
+    font-size: 4vw;
     padding-bottom: 62px;
 }
 
 div.text h1 > span{
     font-family: var(--title);
     color: var(--amethyst);
-    padding-bottom: 10px;
 }
 
 div.text p{
     color: var(--ghost-white);
-    font-size: 1.5em;
+    font-size: 2vw;
     font-weight: 400;
 }
 
@@ -135,4 +134,77 @@ nav.social-media a:hover {
 
 nav.social-media img:hover {
     opacity:0.5;
+}
+
+@media only screen and (max-width: 600px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    
+    main{
+        position: relative;
+        margin: 0;
+        max-width: 100vw;
+        max-height: 100vh;
+        display: block;
+
+    }
+    
+    section#main {
+        position: absolute;
+        top: 30vh;
+        right: 0;
+        width: 345px;
+        height: 300px;
+        background-color: var(--cal-poly-green);
+        border-radius: 200vw 0 0 200vw;
+        /* background-image: url(../imagens/elipse-background.png);
+        background-repeat: no-repeat;
+        background-size: contain; */
+    }
+
+    section#mobile {
+        position: absolute;
+        bottom: 30vh;
+        left: 50%;
+        transform: translate(-50%,0);
+        /* margin:auto;
+        bottom: 5vw;
+        left: 50%;
+        transform: translate(-50%,0);
+        width: 309px;
+        height: 309px; */
+        background-image:none;
+        background-size: contain;
+        background-repeat: no-repeat;
+        -webkit-filter: none;
+        filter: none;
+    }
+    
+    iframe#screen {
+        position: absolute;
+        bottom: 3vh;
+        left: 50%;
+        transform: translate(-50%,0);
+        width: 309px;
+        height: 309px;
+        box-sizing: border-box;
+        border-radius: 31px;
+        border: 5px solid var(--amethyst);
+        box-shadow: 5px 5px var(--amethyst);
+    }
+
+    nav.social-media {
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, 0);
+        padding: 0;       
+        margin: 0;
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
+    }
 }
