@@ -39,9 +39,11 @@ section#main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: url(../imagens/elipse-background.png);
+    background-color: var(--cal-poly-green);
+    border-radius: 200px 0 0 200px;
+    /* background-image: url(../imagens/elipse-background.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain; */
 }
 
 div.text {
@@ -82,6 +84,8 @@ section#mobile {
     background-image:url(../imagens/frame-iphone.png);
     background-size: contain;
     background-repeat: no-repeat;
+    -webkit-filter: drop-shadow(5px 5px var(--amethyst));
+    filter: drop-shadow(5px 5px var(--amethyst))
 }
 
 iframe#screen {
